@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "material-components-web": "^0.16.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.10.0"
   }
 }
