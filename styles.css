@@ -1,0 +1,255 @@
+html, body {
+    margin: 0;
+    background-color: #f7f7f7;
+    height: 100%;
+}
+
+/* 
+    OVERRIDES OF MDC STYLES 
+*/
+.mdc-toolbar__row {
+    min-height: 48px;
+}
+
+.mdc-toolbar__section > .mdc-button {
+    padding: 0 8px;
+    margin: 0 16px;
+}
+
+.mdc-tab {
+    line-height: 40px;
+    min-width: 100px;
+    padding: 0 16px;
+}
+
+.mdc-tab-bar, .mdc-button {
+    text-transform: none;
+}
+
+.mdc-button .material-icons {
+    top: 6px;
+    position: relative;
+}
+
+.mdc-permanent-drawer {
+    border-right: none;
+    width: 300px;
+}
+
+.mdc-layout-grid {
+    padding: 0;
+}
+
+/* 
+    THEME CSS (because leveraging MDC's theming requires SASS) 
+*/
+.mdc-toolbar {
+    background: #fff;
+    color: #272727;
+}
+
+.mdc-toolbar__section .mdc-button {
+    color: #767676;
+}
+
+.mdc-toolbar__section .mdc-button::before {
+    transition: none;
+}
+
+.mdc-toolbar__section .mdc-button:hover {
+    color: #272727;
+}
+
+.mdc-toolbar__section .mdc-button:hover::before {
+    background-color: transparent;
+}
+
+.mdc-toolbar .mdc-tab-bar .mdc-tab {
+    color: #767676;
+}
+
+.mdc-toolbar .mdc-tab-bar .mdc-tab:hover {
+    color: #272727;
+}
+
+.mdc-toolbar .mdc-tab-bar .mdc-tab--active, .mdc-toolbar .mdc-tab-bar .mdc-tab--active:hover {
+    color: #4285f4;
+}
+
+.mdc-toolbar .mdc-tab-bar:not(.mdc-tab-bar-upgraded) .mdc-tab::after {
+    background: #4285f4;
+}
+
+.mdc-permanent-drawer {
+    background: #f7f7f7;
+}
+
+.mdc-permanent-drawer .mdc-list-group__subheader {
+    color: #9e9e9e;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.mdc-permanent-drawer .mdc-list-item {
+    color: #616161;
+    font-size: 13px;
+}
+
+.mdc-permanent-drawer .mdc-list-item:hover {
+    background: rgba(238,238,238,0.64);
+}
+
+.mdc-permanent-drawer .mdc-permanent-drawer--selected {
+    font-weight: 500;
+    color: #212121;
+    background: #eeeeee;
+}
+
+/* 
+    CUSTOM CLASSES 
+*/
+.kb-link__see-more {
+    text-decoration: none;
+}
+
+.kb-link__see-more:hover {
+    text-decoration: underline;
+    color: #4285f4;
+}
+
+.kb-user-menu, .kb-group-space-menu {
+    top: 50px;
+}
+
+.kb-group-space-menu {
+    right: 75px;
+}
+
+.kb-content {
+    display: flex;
+    flex: 1 1 auto;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 24px;
+}
+
+.kb-content main {
+    padding: 0 24px;
+    margin-bottom: 24px;
+}
+
+.kb-heading-main {
+    font-size: 26px;
+    margin-top: 8px;
+}
+
+.kb-icon-button {
+    border-radius: 50%;
+    min-width: 36px;
+}
+
+.kb-icon-button.toggle__user-menu {
+    margin-left: 0;
+    color: #f7f7f7;
+    background: #767676;
+}
+
+.kb-icon-button.toggle__user-menu:hover {
+    color: #f7f7f7;
+    background: #272727;
+}
+
+.kb-image-card {
+    max-width: 600px;
+    background: #fff;
+}
+
+.kb-card__primary-with-toggle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kb-card-title__inline {
+    display: inline-block;
+    line-height: 34px;
+}
+
+.kb-docs-by-status__group {
+    background-image: url(images/group-docs-by-status.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 360px;
+    width: 600px;
+    background-position: 50% 50%;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.kb-docs-by-status__user {
+    background-image: url(images/your-docs-by-status.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 360px;
+    width: 600px;
+    background-position: 50% 50%;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.kb-search-word-cloud {
+    background-image: url(images/search-word-cloud.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 360px;
+    width: 600px;
+    background-position: 50% 50%;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.mdc-card__supporting-text.kb-collapsible:last-child {
+    padding-bottom: 0;
+}
+
+.kb-collapsible {
+    transition: max-height 300ms linear;
+    max-height: 500px;
+}
+
+.kb-collapsible.collapsed {
+    max-height: 0;
+}
+
+.kb-docs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+}
+
+.kb-docs-table tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.kb-docs-table th {
+    width: 200px;
+    text-align: left;
+}
+
+.kb-docs-table th, .kb-docs-table td {
+    padding: 4px 12px;
+}
+
+.kb-footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: #9e9e9e;
+    border-top: 1px solid #e4e4e4;
+}
+
+.kb-footer a {
+    color: #272727;
+    text-decoration: none;
+}
+
+.kb-footer a:hover {
+    text-decoration: underline;
+    color: #4285f4;
+}

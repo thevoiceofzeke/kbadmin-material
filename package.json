@@ -1,0 +1,15 @@
+{
+  "name": "kbadmin",
+  "version": "1.0.0",
+  "description": "An experiment with material design for the KB Admin tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "npm install && http-server -p 8080"
+  },
+  "author": "Zeke Witter",
+  "license": "ISC",
+  "dependencies": {
+    "material-components-web": "^0.16.0"
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="mdc-typography">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Home: KB Admin Tools</title>
+        <!-- MDC stylesheet -->
+        <link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
+        <!-- Material icon font -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Custom stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="mdc-toolbar mdc-toolbar--fixed">
+            <!-- APP TITLE AND BASIC MENUS -->
+            <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                    <span class="mdc-toolbar__title">KB Admin Tools</span>
+                </section>
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+                    <!-- Group space w/ caret menu icon -->
+                    <button class="mdc-button kb-group-space-button toggle__group-space">
+                        WiscWeb CMS <i class="material-icons">arrow_drop_down</i>
+                    </button>
+                    <div class="mdc-simple-menu kb-group-space-menu mdc-simple-menu--open-from-top-right" tabindex="-1">
+                        <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
+                            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                                WiscWeb CMS
+                            </li>
+                            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                                WiscList
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- USERNAME MENU w/ log out and user's guide links -->
+                    <button class="mdc-button kb-icon-button toggle__user-menu">
+                        W
+                    </button>
+                    <div class="mdc-simple-menu kb-user-menu mdc-simple-menu--open-from-top-right" tabindex="-1">
+                        <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
+                            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                                User guide
+                            </li>
+                            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                                Log out
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <!-- TAB NAVIGATION -->
+            <div class="mdc-toolbar__row">
+                <nav id="basic-tab-bar" class="mdc-tab-bar mdc-toolbar__section">
+                    <a class="mdc-tab mdc-tab--active" href="index">Home</a>
+                    <a class="mdc-tab" href="docs">Documents</a>
+                    <a class="mdc-tab" href="topics">Topics</a>
+                    <a class="mdc-tab" href="news">News</a>
+                    <a class="mdc-tab" href="sitepref">SitePref</a>
+                    <a class="mdc-tab" href="users">Users</a>
+                    <a class="mdc-tab" href="assessment">Assessment</a>
+                    <a class="mdc-tab" href="stats">Stats</a>
+                    <span class="mdc-tab-bar__indicator"></span>
+                </nav>
+            </div>
+        </header>
+        <!-- MAIN CONTENT -->
+        <div class="kb-content mdc-toolbar-fixed-adjust">
+
+            <!-- SIDE NAVIGATION -->
+            <nav class="mdc-permanent-drawer mdc-list-group">
+                <nav class="mdc-list mdc-list--dense">
+                    <h3 class="mdc-list-group__subheader">Sections</h3>
+                    <a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
+                        Dashboard
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        My profile
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        Meeting minutes
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        Internal KB site
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        External KB site
+                    </a>
+                </nav>
+            </nav>
+            <div class="kb-wrapper__main">
+                <!-- MAIN VIEW -->
+                <main>
+                    <!-- Dashboard content -->
+                    <h1 class="kb-heading-main">Dashboard</h1>
+                    <div class="mdc-layout-grid">
+                        <div class="mdc-layout-grid__inner">
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
+                                <div class="mdc-card kb-image-card">
+                                    <section class="mdc-card__media kb-docs-by-status__group"></section>
+                                    <section class="mdc-card__primary kb-card__primary-with-toggle">
+                                        <h1 class="mdc-card__title kb-card-title__inline">Document count by Status for the group</h1>
+                                        <button class="mdc-button kb-toggle__docs-for-group"><i class="material-icons">keyboard_arrow_down</i></button>
+                                    </section>
+                                    <section class="mdc-card__supporting-text kb-stats__docs-for-group kb-collapsible collapsed">
+                                        <table class="kb-docs-table">
+                                            <tr>
+                                                <th>Active</th>
+                                                <td>258</td>
+                                            </tr>
+                                            <tr>
+                                                <th>In review</th>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <th>In progress</th>
+                                                <td>26</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Inactive</th>
+                                                <td>35</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Unreviewed (1+ years)</th>
+                                                <td>196</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Expired</th>
+                                                <td>0</td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
+                                <div class="mdc-card kb-image-card">
+                                    <section class="mdc-card__media kb-docs-by-status__user"></section>
+                                    <section class="mdc-card__primary  kb-card__primary-with-toggle">
+                                        <h1 class="mdc-card__title kb-card-title__inline">Your document count by Status</h1>
+                                        <button class="mdc-button kb-toggle__docs-for-user"><i class="material-icons">keyboard_arrow_down</i></button>
+                                    </section>
+                                    <section class="mdc-card__supporting-text kb-stats__docs-for-user kb-collapsible collapsed">
+                                        <table class="kb-docs-table">
+                                            <tr>
+                                                <th>Active</th>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>In review</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>In progress</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Inactive</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Unreviewed (1+ years)</th>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Expired</th>
+                                                <td>0</td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
+                                <div class="mdc-card kb-image-card">
+                                    <section class="mdc-card__media kb-search-word-cloud"></section>
+                                    <section class="mdc-card__primary  kb-card__primary-with-toggle">
+                                        <h1 class="mdc-card__title kb-card-title__inline">Search by the numbers</h1>
+                                        <button class="mdc-button kb-toggle__search-word-cloud"><i class="material-icons">keyboard_arrow_up</i></button>
+                                    </section>
+                                    <section class="mdc-card__supporting-text kb-stats__search-word-cloud kb-collapsible">
+                                        <ul class="mdc-list mdc-list--dense">
+                                            <li class="mdc-list-item">1. calendar (14)</li>
+                                            <li class="mdc-list-item">2. media (14)</li>
+                                            <li class="mdc-list-item">3. menu (13)</li>
+                                            <li class="mdc-list-item">4. bold (13)</li>
+                                            <li class="mdc-list-item">5. user (13)</li>
+                                            <li class="mdc-list-item"><a href="#" class="kb-link__see-more">See more</a></li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- FOOTER -->
+                <footer>
+                    <div class="kb-footer">
+                        Contact <a href="mailto:kb-team@lists.wisc.edu">kb-team@lists.wisc.edu</a> with any problems
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- MDC scripts -->
+        <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
